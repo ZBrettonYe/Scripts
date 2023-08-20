@@ -1,0 +1,10 @@
+<find>openGithubRelease:function(){var e=this;return</find>
+<replace>openGithubRelease:function(){var e=null;return</replace>
+<find>e._v("New"</find>
+<replace>e._v(""</replace>
+<find>staticClass:"new-version-tag"</find>
+<replace>staticClass:""</replace>
+<find>staticClass:"item"},[t("div",[e._v("Show New Version Icon")]),e._v(" "),t("SwitchView"</find>
+<replace>staticClass:""},[t("div",[e._v("")]),e._v(" "),t(""</replace>
+<find>staticClass:"item"},[t("div",[e._v("有新版本时提醒")]),e._v(" "),t("SwitchView"</find>
+<replace>staticClass:""},[t("div",[e._v("")]),e._v(" "),t(""</replace>

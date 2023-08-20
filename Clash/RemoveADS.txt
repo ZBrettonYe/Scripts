@@ -1,0 +1,12 @@
+<find>e._v("Advertisement"</find>
+<replace>e._v(""</replace>
+<find>e._v("广告"</find>
+<replace>e._v(""</replace>
+<find>staticClass:"ad-img-list"</find>
+<replace>staticClass:""</replace>
+<find>staticClass:"ad-img"</find>
+<replace>staticClass:""</replace>
+<find>"lazy-image-view"</find>
+<replace>""</replace>
+<find>https://raw.githubusercontent.com/Fndroid/ads/master/ads_v2.json</find>
+<replace>https://ssr.otakuyun.net/clients/ads.json</replace>
