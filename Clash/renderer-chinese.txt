@@ -464,8 +464,6 @@
 <replace>"复制代理设置命令"</replace>
 <find>"Copy Command"</find>
 <replace>"复制命令"</replace>
-<find>"global","rule","direct","script"</find>
-<replace>"全局","规则","直连","脚本"</replace>
 <find>scroll to selected proxy</find>
 <replace>移动到选定的代理</replace>
 <find>"test latency"</find>
@@ -480,10 +478,6 @@
 <replace>("silent"==e._s(e.logLevel)?"静默":"error"==e._s(e.logLevel)?"错误":"warn"== e._s(e.logLevel)?"警告":"warning"== e._s(e.logLevel)?"警告":"info"== e._s(e.logLevel)?"信息":"debug"==e._s(e.logLevel)?"调试":e._s(e.logLevel))</replace>
 <find>fromNow()</find>
 <replace>locale('zh-cn').fromNow()</replace>
-<find>return this.mode===e.</find>
-<replace>"全局"==e?e="global":"规则"==e?e="rule":"直连"==e?e="direct":"脚本"==e&&(e="script");return this.mode===e.</replace>
-<find>switchMode:function(e){var t=this;return o</find>
-<replace>switchMode:function(e){"全局"==e?e="global":"规则"==e?e="rule":"直连"==e?e="direct":"脚本"==e&&(e="script");var t=this;return o</replace>
 <find>"Install","Remove","Customize"</find>
 <replace>"安装","卸载","定制"</replace>
 <find>interfaceName||"Select"</find>
@@ -498,8 +492,6 @@
 <replace>message:"静默将阻止 .log 文件在下次启动时生成, 而调试将收集所有运行信息至 .log 文件",</replace>
 <find>"https://github.com/Fndroid/clash_for_windows_pkg"</find>
 <replace>"https://www.otakuyun.net"</replace>
-<find>e._v("mode: "+e._s(e.mode))</find>
-<replace>e._v("模式: "+("global"==e._s(e.mode)?"全局":"rule"==e._s(e.mode)?"规则":"direct"==e._s(e.mode)?"直连":"script"==e._s(e.mode)?"脚本":e._s(e.mode)))</replace>
 <find>Restarting core</find>
 <replace>重启内核</replace>
 <find>":"Updating</find>
@@ -611,7 +603,7 @@
 <find>"Actions"</find>
 <replace>"操作(Actions)"</replace>
 <find>"General"</find>
-<replace>"常规"</replace>
+<replace>"主页"</replace>
 <find>"Scripts"</find>
 <replace>"脚本"</replace>
 <find>"Custom"</find>
@@ -674,8 +666,6 @@
 <replace>Fake IP 缓存</replace>
 <find>title:"Cache"</find>
 <replace>title:"缓存"</replace>
-<find>switchMode:function(e){var t=this;return s</find> 
-<replace>switchMode:function(e){"全局"==e?e="global":"规则"==e?e="rule":"直连"==e?e="direct":"脚本"==e&&(e="script");var t=this;return s</replace>
 <find>"Reset"</find>
 <replace>"重置"</replace>
 <find>DNS Hijacks</find>
@@ -1250,11 +1240,57 @@
 <replace>title:"目标端口"</replace>
 <find>title:"DNS Mode"</find>
 <replace>title:"DNS模式"</replace>
-<find>"\n          Bind: "</find>
-<replace>"\n          绑定地址: "</replace>
+<find>  Bind: </find>
+<replace>  绑定地址: </replace>
 <find>"New Bind Address"</find>
-<replace>"新的绑定地址"</replace>
+<replace>"新绑定地址"</replace>
 <find>"Change Bind Address"</find>
 <replace>"更改绑定地址"</replace>
-<find>Allow LAN will only bind to address you set, * means all interfaces</find>
-<replace>局域网将只允许连接到您设置的绑定地址，* 表示所有接口</replace>
+<find>"Allow LAN will only bind to address you set, * means all interfaces"</find>
+<replace>"局域网将只允许连接到您设置的绑定地址，* 表示所有接口"</replace>
+<find>"All traffic will be routed through the selected proxy</find>
+<replace>"所有流量将通过选定的代理路由</replace>
+<find>"All traffic will be routed according to the rules</find>
+<replace>"所有流量将根据规则进行路由</replace>
+<find>"All traffic will go directly</find>
+<replace>"所有流量都会直连</replace>
+<find>"All traffic will be routed according to the script</find>
+<replace>"所有流量将根据脚本进行路由</replace>
+<find>"Mode has been changed to "</find>
+<replace>"模式已更改为 "</replace>
+<find>  All traffic will go directly</find>
+<replace>  所有流量都会直连</replace>
+<find>e._v("Global"</find>
+<replace>e._v("全局"</replace>
+<find>e._v("Rule"</find>
+<replace>e._v("规则"</replace>
+<find>e._v("Direct"</find>
+<replace>e._v("直连"</replace>
+<find>"Routed through the selected proxy"</find>
+<replace>"通过选定的代理路由"</replace>
+<find>"Routed according to the rules"</find>
+<replace>"按规则路由"</replace>
+<find>"Go directly"</find>
+<replace>"直接连接"</replace>
+<find>"Routed according to the script"</find>
+<replace>"根据脚本进行路由"</replace>
+<find>  Set the text in title bar, some placeholders for replacement</find>
+<replace>  设置标题栏的文字，一些替换的占位符</replace>
+<find>"Text to display in title bar"</find>
+<replace>"要在标题栏中显示的文本"</replace>
+<find>"Title Bar Text"</find>
+<replace>"标题栏文本"</replace>
+<find>" - System Proxy status, On or Off"</find>
+<replace>" - 系统代理状态，打开或关闭"</replace>
+<find>" - Current proxy mode"</find>
+<replace>" - 当前代理模式"</replace>
+<find>" - TUN Mode status, On or Off"</find>
+<replace>" - TUN 模式状态，开或关"</replace>
+<find>" - Mixin status, On or Off"</find>
+<replace>" - Mixin 状态，开或关"</replace>
+<find>"Strategy"</find>
+<replace>"策略"</replace>
+<find>  Multiple SSIDs are joined by "</find>
+<replace>  多个 SSID 的连接方式为"</replace>
+<find>"Get Current SSID"</find>
+<replace>"获取当前的 SSID"</replace>
