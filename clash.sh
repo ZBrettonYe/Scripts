@@ -197,7 +197,6 @@ get_latest_version() {
   fi
   #构造固定文件名
   FILENAME="Clash.for.Windows-$LATEST_TAG-win.7z"
-  TAG="v$LATEST_TAG"
 }
 
 download_latest_release() {
@@ -237,11 +236,12 @@ clean() {
 }
 
 release_github() {
-  git tag $TAG
-  git push origin $TAG
-  #gh release create $TAG -F release-note.md
-  gh release create $TAG
-  gh release upload $TAG ./clash/resources/app.asar
+  git tag $LATEST_TAG
+  git push origin $LATEST_TAG
+  #gh release create $LATEST_TAG -F release-note.md
+  gh release create $LATEST_TAG
+  gh release upload $LATEST_TAG ./clash/resources/app.asar
+  gh release upload $LATEST_TAG ./$FILENAME
 }
 
 # 解压app.asar函数
